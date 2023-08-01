@@ -7,7 +7,7 @@ const Input = (props) => {
                 <label className="label" htmlFor="">{props.lblname}</label>
             </p>
             <p>
-                <input className="textInput" type="text" placeholder={props.placeholder}/>
+                <input className="textInput" type="text" placeholder={props.placeholder} onChange={props.onChange}/>
             </p>
             
         </div>

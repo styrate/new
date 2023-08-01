@@ -1,8 +1,8 @@
 import React from "react"
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 import "./Navbar.css"
 
-import { Link } from "react-router-dom"
 const Navbar = () => {
     const handleClick = () => {
         let  element = document.getElementById("navUl")                        
@@ -31,20 +31,26 @@ const Navbar = () => {
                     <div  >
                         <li className="navItem">
                             <span className="navLink nav1">
+                                <Link to="/login">
                                 <Button
                                     name="login"
                                     bgcolor="#171717"
                                     color="#fff"
                                 />
+                                </Link>
+                                
                             </span>                
                         </li>
                         <li className="navItem">
                             <span className="navLink nav1">
+                                <Link to="/register">
                                 <Button 
                                     name="signup"
                                     bgcolor="#fff"
                                     color=""
                                 />
+                                </Link>
+                                
                             </span>                
                         </li>                
                     </div>
