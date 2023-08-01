@@ -1,13 +1,18 @@
 import './App.css';
 import Showdown from './routes/Showdown/showdown';
-import { BrowserRouter } from 'react-router-dom'
+import Login from './Login/Login';
+import Signup from './Signup/Signup';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Showdown />
+        <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Signup />} />
+          <Route path='/' element={<Showdown />} />
+        </Routes>
       </BrowserRouter>
-      
     </div>
   );
 }
